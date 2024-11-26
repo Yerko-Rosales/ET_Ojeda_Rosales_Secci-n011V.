@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Actualizar Asistente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <form style="margin-top: 40%;">
+    <ion-item>
+      <ion-input 
+        type="text" 
+        name="nombre" 
+        label="Nombre del Asistente:" 
+        labelPlacement="floating" 
+        [(ngModel)]="detalleAsistente.nombre">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input 
+        type="text" 
+        name="evento" 
+        label="Evento Asociado:" 
+        labelPlacement="floating" 
+        [(ngModel)]="detalleAsistente.evento">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input 
+        type="text" 
+        name="estado" 
+        label="Estado:" 
+        labelPlacement="floating" 
+        [(ngModel)]="detalleAsistente.estado">
+      </ion-input>
+    </ion-item>
+
+    <div style="text-align: center; margin-top: 30px;">
+      <ion-button (click)="updateAsistente()" shape="round" color="success">
+        Actualizar
+      </ion-button>
+    </div>
+  </form>
+
+</ion-content>

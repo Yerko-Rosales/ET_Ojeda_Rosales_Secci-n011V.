@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="regresar()">
+        Regresar
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Detalle Asistente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Detalle Asistente</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Nombre: {{asistente.nombre}}</ion-card-subtitle>
+      <ion-card-title>Evento: {{asistente.evento}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        Estado: {{asistente.estado}}<br>
+        ID: {{asistente.id}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

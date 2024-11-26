@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Eventos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let evento of eventos">
+      <ion-label>
+        <h3>{{ evento.nombre }}</h3>
+        <p><strong>Fecha:</strong> {{ evento.fecha }}</p>
+        <p><strong>Estado:</strong> {{ evento.estado }}</p>
+      </ion-label>
+      <!-- Botón para generar QR -->
+      <ion-button (click)="generarQR(evento)">Generar QR</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!-- Mostrar el QR generado -->
+  <div *ngIf="qrData">
+    <angularx-qrcode [qrcValue]="qrData" [qrcSize]="256"></angularx-qrcode>
+  </div>
+</ion-content>

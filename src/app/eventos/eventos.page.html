@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Eventos Disponibles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let evento of eventos">
+      <ion-label>
+        <h2>{{ evento.nombre }}</h2>
+        <p>Fecha: {{ evento.fecha }}</p>
+        <p>Lugar: {{ evento.lugar }}</p>
+      </ion-label>
+      <ion-button (click)="inscribirse(evento.Nombre)" color="primary">Inscribirse</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

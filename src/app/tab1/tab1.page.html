@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar  color="primary">
+    <ion-title>
+      Hola, {{ asistente }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="asistente">
+  <div style="text-align: center; margin-top: 20px;">
+    <p>Bienvenido a ITS-Events</p>
+  </div>
+
+  <!-- Carrusel -->
+  <ion-slides pager="true" direction="horizontal">
+    <ion-slide>
+      <div class="slide-container">
+        <img src="assets/icon/IV.png" alt="Imagen 1" />
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide-container">
+        <img src="assets/icon/navidad.webp" alt="Imagen 2" />
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide-container">
+        <img src="assets/icon/descarga.png" alt="Imagen 3" />
+      </div>
+    </ion-slide>
+  </ion-slides>
+  
+  
+
+  <!-- Contenido adicional -->
+  <div style="text-align: center; margin-top: 20px;">
+    <p>Explora los eventos disponibles y gestiona tu cuenta fácilmente.</p>
+  </div>
+</ion-content>
