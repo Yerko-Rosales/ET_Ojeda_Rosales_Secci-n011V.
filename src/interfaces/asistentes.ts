@@ -1,6 +1,6 @@
 // Asistentes
 
-
+// Representación completa de un asistente
 export interface IAsistente {
     id: number;
     nombre: string;
@@ -17,7 +17,7 @@ export interface IAsistente {
     password: string;
   }
   
-  // QR
+  // QRd
   
   // Datos para generar un QR
   export interface AsistenteQr {
@@ -33,13 +33,4 @@ export interface IAsistente {
     eventoAsistente: string;
     nombreUsuario: string;
   }
-  
-  export interface IEvento {
-    id: string;
-    nombre: string;
-    fecha: string;
-    estado: string;
-    asistente: IAsistente; // El asistente es un objeto dentro del evento
-  }
-  
   

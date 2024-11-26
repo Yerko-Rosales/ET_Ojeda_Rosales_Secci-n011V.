@@ -11,13 +11,12 @@ export class Tab1Page implements OnInit {
 
   posteos: any[] = []; 
   asistente: any; 
-
-  
+  // Opciones del carrusel
   slideOpts = {
     initialSlide: 0,
     speed: 400,
-    slidesPerView: 1, 
-    spaceBetween: 10, 
+    slidesPerView: 3, // Cantidad de imágenes visibles al mismo tiempo
+    spaceBetween: 10, // Espacio entre las imágenes
   };
 
   constructor(
@@ -29,7 +28,6 @@ export class Tab1Page implements OnInit {
     this.asistente = sessionStorage.getItem('nombre'); 
     if (!this.asistente) {
       console.error('Asistente no autenticado');
-      
     }
     console.log(this.asistente);
   }
@@ -45,7 +43,7 @@ export class Tab1Page implements OnInit {
     });
 
     this.apidatos.getPosts().subscribe(
-      datos => (this.posteos = datos) 
+      datos => (this.posteos = datos)
     );
   }
 }

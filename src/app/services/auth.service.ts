@@ -26,7 +26,7 @@ export class AuthService {
     return sessionStorage.getItem('nombre') != null;
   }
 
- 
+  
   PostAsistente(newAsistente: INuevoAsistente): Observable<INuevoAsistente> {
     return this.httpclient.post<INuevoAsistente>(`${environment.apiUrl}/asistentes`, newAsistente);
   }

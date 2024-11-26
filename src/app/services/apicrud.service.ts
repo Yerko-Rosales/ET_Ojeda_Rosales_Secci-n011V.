@@ -6,7 +6,6 @@ import{environment} from 'src/environments/environment';
 import { INuevoAsistente, IAsistente } from '../../interfaces/asistentes';
 import { throwError } from 'rxjs';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -48,11 +47,8 @@ export class ApicrudService {
     );
   }
 
-  
-  
-
   updateAsistenteEvento(evento: any): Observable<IAsistente> {
-    const asistenteId = sessionStorage.getItem('asistenteId'); // ID del asistente logueado
+    const asistenteId = sessionStorage.getItem('asistenteId'); 
   
     
     if (!asistenteId) {

@@ -8,7 +8,7 @@ import { IAsistente } from '../../interfaces/asistentes';
 })
 export class ApiusersService {
 
-  apiUrl = 'http://localhost:3000'; 
+  apiUrl = 'http://localhost:3000/asistentes';// Define la URL de la API
 
   constructor(private httpclient: HttpClient) { }
 

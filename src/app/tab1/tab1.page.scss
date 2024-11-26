@@ -1,7 +1,7 @@
 
 ion-slides {
-  height: auto; 
-  width: 100%; 
+  height: auto; /* Ajusta la altura del carrusel */
+  width: 100%; /* Asegura que tome todo el ancho disponible */
   display: block;
 }
 
@@ -12,9 +12,9 @@ ion-slide {
 }
 
 ion-slide img {
-  width: 100%; 
-  height: auto; 
-  object-fit: cover; 
+  width: 100%; /* Las imágenes llenarán el ancho del slide */
+  height: auto; /* Mantendrá la proporción */
+  object-fit: cover; /* Evita deformaciones */
 }
 .slide-container {
   width: 100%;

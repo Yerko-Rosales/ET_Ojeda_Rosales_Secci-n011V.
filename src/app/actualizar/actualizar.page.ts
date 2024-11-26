@@ -28,7 +28,7 @@ export class ActualizarPage implements OnInit {
               }
 
   ngOnInit() {
-    this.detalleAsistente = this.asistente;
+    this.detalleAsistente = this.asistente; 
   }
 
   updateAsistente() { 

@@ -12,7 +12,7 @@ import { ToastController } from '@ionic/angular';
 })
 export class InicioPage implements OnInit {
 
-  asistenteData: any; 
+  asistenteData: any;
 
   asistente = { 
     id: 0,

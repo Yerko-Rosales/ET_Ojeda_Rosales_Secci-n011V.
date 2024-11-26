@@ -12,7 +12,7 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./detalle-asistente.page.scss'],
 })
 export class DetalleAsistentePage implements OnInit {
-  
+  // Inicialización de la propiedad con valores predeterminados
   asistente: IAsistente = { id: 0, nombre: '', evento: '', estado: false, password: '' };
   qrdata: string = '';
   nombreUsuario: string | null;

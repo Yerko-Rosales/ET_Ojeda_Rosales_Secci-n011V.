@@ -9,6 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class DetallePage implements OnInit {
 
   asistente: any; 
+
   constructor(private activated: ActivatedRoute, 
               private router: Router) { 
     this.activated.queryParams.subscribe(params => {

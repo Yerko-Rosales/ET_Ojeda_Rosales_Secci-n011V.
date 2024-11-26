@@ -27,16 +27,16 @@ ion-content {
     top: 05%;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1; 
-    width: 80%; 
-    opacity: 0.8; 
-    pointer-events: none; 
+    z-index: 1; /* La imagen estará detrás del formulario */
+    width: 80%; /* Ajusta el tamaño según lo necesites */
+    opacity: 0.8; /* Puedes modificar la opacidad según tu preferencia */
+    pointer-events: none; /* La imagen no interferirá con la interacción del formulario */
   }
   
   form {
     position: relative;
-    z-index: 2; 
-    padding-top: 120px; 
+    z-index: 2; /* Asegura que el formulario esté por encima de la imagen */
+    padding-top: 120px; /* Ajusta el margen superior para que el formulario no se sobreponga a la imagen */
     opacity: 0.7;
  
   }

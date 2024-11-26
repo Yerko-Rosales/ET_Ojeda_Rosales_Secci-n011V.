@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ApidatosService {
 
-  apiPost='http://localhost:3000';
+  apiPost= ''
 
   constructor(private httpclient: HttpClient) { }
 

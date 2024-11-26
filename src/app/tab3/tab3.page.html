@@ -1,26 +1,27 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="agregarAsistente()"> 
+        Crear Asistente
+      </ion-button>
+    </ion-buttons>
     <ion-title>
-      Eventos
+      Asistentes
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-list>
-    <ion-item *ngFor="let evento of eventos">
+    <ion-item *ngFor="let a of asistentes" (click)="verDetalleAsistente(a)"> 
       <ion-label>
-        <h3>{{ evento.nombre }}</h3>
-        <p><strong>Fecha:</strong> {{ evento.fecha }}</p>
-        <p><strong>Estado:</strong> {{ evento.estado }}</p>
+        <h3>Id Asistente: {{a.id}}</h3> 
+        <h4>Nombre: {{a.nombre}}</h4>
+        <h4>Evento: {{a.evento}}</h4> 
+        <h4>Estado: {{a.estado}}</h4> 
       </ion-label>
-     
-      <ion-button (click)="generarQR(evento)">Generar QR</ion-button>
     </ion-item>
   </ion-list>
 
-  
-  <div *ngIf="qrData">
-    <angularx-qrcode [qrcValue]="qrData" [qrcSize]="256"></angularx-qrcode>
-  </div>
+  <app-explore-container name="Tab 3 page"></app-explore-container>
 </ion-content>

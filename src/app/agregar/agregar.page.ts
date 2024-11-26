@@ -10,9 +10,9 @@ import { IAsistente } from '../../interfaces/asistentes';
 })
 export class AgregarPage implements OnInit {
 
- 
+  
   asistente: IAsistente = {
-    id: 0,               
+    id: 0,              
     password: "",        
     nombre: "",          
     evento: "",          
@@ -28,7 +28,7 @@ export class AgregarPage implements OnInit {
     
     if (this.asistente.nombre && this.asistente.evento && this.asistente.password) {
       this.apicrud.postAsistente(this.asistente).subscribe(() => {
-       
+        
         this.router.navigate(['/tabs/tab3']);
       });
     } else {
