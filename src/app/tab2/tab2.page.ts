@@ -7,7 +7,7 @@ import { ApicrudService } from '../services/apicrud.service';
   styleUrls: ['./tab2.page.scss'],
 })
 export class Tab2Page implements OnInit {
-  eventos: any[] = []; // Lista de eventos cargados
+  eventos: any[] = []; 
 
   constructor(private apicrudService: ApicrudService) {}
 
@@ -15,19 +15,19 @@ export class Tab2Page implements OnInit {
     this.cargarEventos();
   }
 
-  // Cargar los eventos desde el servicio
+  
   cargarEventos() {
     this.apicrudService.getEventos().subscribe((data) => {
       this.eventos = data;
     });
   }
 
-  // Función para inscribirse a un evento
+  
   inscribirse(evento: any) {
-    // Mostrar mensaje de confirmación de inscripción
+    
     alert(`Te has inscrito exitosamente al evento "${evento.nombre}".`);
 
-    // Actualizar la información en el almacenamiento JSON
+    
     this.apicrudService.updateAsistenteEvento(evento).subscribe(() => {
       console.log(`Evento "${evento.nombre}" registrado en el asistente.`);
     });

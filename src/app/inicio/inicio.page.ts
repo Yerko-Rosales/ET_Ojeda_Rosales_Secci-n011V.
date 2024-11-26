@@ -12,13 +12,13 @@ import { ToastController } from '@ionic/angular';
 })
 export class InicioPage implements OnInit {
 
-  asistenteData: any; // Renombrado desde "userdata"
+  asistenteData: any; 
 
-  asistente = { // Renombrado desde "usuario"
+  asistente = { 
     id: 0,
-    nombre: "", // Renombrado desde "username"
-    evento: "", // Adaptado
-    estado: false, // Renombrado desde "isactive"
+    nombre: "", 
+    evento: "", 
+    estado: false, 
     password: ""
   };
 
@@ -38,15 +38,15 @@ export class InicioPage implements OnInit {
     if (!this.loginForm.valid) {
       return;
     }
-    const nombre = this.loginForm.value.nombre; // Renombrado
+    const nombre = this.loginForm.value.nombre; 
     const password = this.loginForm.value.password;
 
-    this.authservice.GetAsistenteByNombre(nombre).subscribe(resp => { // Renombrado método
+    this.authservice.GetAsistenteByNombre(nombre).subscribe(resp => { 
       this.asistenteData = resp;
       console.log(this.asistenteData);
       if (this.asistenteData.length === 0) {
         this.loginForm.reset();
-        this.AsistenteNoExiste(); // Renombrado
+        this.AsistenteNoExiste(); 
         return;
       }
 
@@ -59,20 +59,20 @@ export class InicioPage implements OnInit {
       };
       if (this.asistente.password !== password) {
         this.loginForm.reset();
-        this.ErrorAsistente(); // Renombrado
+        this.ErrorAsistente(); 
         return;
       }
       if (!this.asistente.estado) {
         this.loginForm.reset();
-        this.AsistenteInactivo(); // Renombrado
+        this.AsistenteInactivo(); 
         return;
       }
       this.IniciarSesion(this.asistente);
     });
   }
 
-  private IniciarSesion(asistente: any) { // Renombrado desde "usuario"
-    sessionStorage.setItem('nombre', asistente.nombre); // Renombrado
+  private IniciarSesion(asistente: any) { 
+    sessionStorage.setItem('nombre', asistente.nombre); 
     sessionStorage.setItem('password', asistente.password);
     sessionStorage.setItem('ingresado', 'true');
     this.showToast('Sesión Iniciada ' + this.asistente.nombre);
@@ -87,7 +87,7 @@ export class InicioPage implements OnInit {
     toast.present();
   }
 
-  async AsistenteInactivo() { // Renombrado desde "UsuarioInactivo"
+  async AsistenteInactivo() { 
     const alerta = await this.alertcontroller.create({ 
       header: 'Asistente inactivo',
       message: 'Contactar a admin@admin.cl',
@@ -96,7 +96,7 @@ export class InicioPage implements OnInit {
     alerta.present();
   }
 
-  async ErrorAsistente() { // Renombrado desde "ErrorUsuario"
+  async ErrorAsistente() { 
     const alerta = await this.alertcontroller.create({ 
       header: 'Error..',
       message: 'Revise sus credenciales',
@@ -105,7 +105,7 @@ export class InicioPage implements OnInit {
     alerta.present();
   }
 
-  async AsistenteNoExiste() { // Renombrado desde "UsuarioNoExiste"
+  async AsistenteNoExiste() { 
     const alerta = await this.alertcontroller.create({ 
       header: 'No existe...',
       message: 'Debe registrarse..',
@@ -115,7 +115,7 @@ export class InicioPage implements OnInit {
   }
 
   Registrar() {
-    this.router.navigate(['/crear-asistente']); // Renombrado desde "/crear-usuario"
+    this.router.navigate(['/crear-asistente']); 
   }
 
 }

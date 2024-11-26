@@ -20,12 +20,12 @@ export class AppComponent {
     },
     {
       icon: 'person-circle-outline',
-      name: 'Eventos', // Cambiado desde "Usuarios"
+      name: 'Eventos', 
       redirecTo: '/tabs/tab2'
     },
     {
-      icon: 'people-outline', // Cambiado ícono desde "paw-outline"
-      name: 'Asistentes', // Cambiado desde "Mascotas"
+      icon: 'people-outline', 
+      name: 'Asistentes', 
       redirecTo: '/tabs/tab3'
     },
   ];

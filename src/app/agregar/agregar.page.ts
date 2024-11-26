@@ -10,13 +10,13 @@ import { IAsistente } from '../../interfaces/asistentes';
 })
 export class AgregarPage implements OnInit {
 
-  // Objeto inicializado siguiendo la interfaz IAsistente
+ 
   asistente: IAsistente = {
-    id: 0,               // Identificador inicial predeterminado
-    password: "",        // Contraseña vacía al inicio
-    nombre: "",          // Nombre vacío
-    evento: "",          // Evento vacío
-    estado: false        // Estado predeterminado como inactivo
+    id: 0,               
+    password: "",        
+    nombre: "",          
+    evento: "",          
+    estado: false        
   };
 
   constructor(private apicrud: ApicrudService, 
@@ -25,10 +25,10 @@ export class AgregarPage implements OnInit {
   ngOnInit() {}
 
   CrearAsistente() {
-    // Aseguramos que se envíen datos válidos antes de llamar al servicio
+    
     if (this.asistente.nombre && this.asistente.evento && this.asistente.password) {
       this.apicrud.postAsistente(this.asistente).subscribe(() => {
-        // Redirige al listado de asistentes después de crear uno nuevo
+       
         this.router.navigate(['/tabs/tab3']);
       });
     } else {

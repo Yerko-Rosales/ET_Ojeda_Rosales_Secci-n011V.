@@ -31,17 +31,17 @@ export class CrearAsistentePage implements OnInit {
   registrarAsistente() {
     if (this.registroForm.valid) {
       const nuevoAsistente: IAsistente = {
-        id: Math.floor(Math.random() * 1000000), // Generar un ID aleatorio
+        id: Math.floor(Math.random() * 1000000), 
         nombre: this.registroForm.value.nombre,
-        evento: '', // No asigna evento al registrarse
-        estado: true, // Se registra activo
+        evento: '', 
+        estado: true, 
         password: this.registroForm.value.password,
       };
 
       this.authService.PostAsistente(nuevoAsistente).subscribe(
         () => {
           this.mostrarMensaje('Registro exitoso', 'Su cuenta ha sido creada.');
-          this.router.navigateByUrl('/inicio'); // Redirige al inicio de sesión
+          this.router.navigateByUrl('/inicio'); 
         },
         (error) => {
           console.error('Error al registrar:', error);

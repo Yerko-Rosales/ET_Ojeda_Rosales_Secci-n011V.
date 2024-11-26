@@ -8,8 +8,8 @@ import { IAsistente } from '../../interfaces/asistentes';
   styleUrls: ['./eventos.page.scss'],
 })
 export class EventosPage implements OnInit {
-  eventos: any[] = []; // Lista de eventos disponibles
-  asistente: IAsistente; // Asistente actual
+  eventos: any[] = []; 
+  asistente: IAsistente; 
 
   constructor(private apicrudService: ApicrudService) {
     const asistenteData = sessionStorage.getItem('asistente');
@@ -28,7 +28,7 @@ export class EventosPage implements OnInit {
 
   inscribirse(eventoId: string) {
     if (this.asistente) {
-      this.asistente.evento = eventoId; // Asigna el evento al asistente
+      this.asistente.evento = eventoId; 
       this.apicrudService.updateAsistente(this.asistente).subscribe(() => {
         alert('Inscripción exitosa');
       });

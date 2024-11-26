@@ -9,15 +9,15 @@ import { ApidatosService } from '../services/apidatos.service';
 })
 export class Tab1Page implements OnInit {
 
-  posteos: any[] = []; // Arreglo que contiene la información del JSON
-  asistente: any; // Renombrado desde "usuario"
+  posteos: any[] = []; 
+  asistente: any; 
 
-  // Opciones del carrusel
+  
   slideOpts = {
     initialSlide: 0,
     speed: 400,
-    slidesPerView: 1, // Cantidad de imágenes visibles al mismo tiempo
-    spaceBetween: 10, // Espacio entre las imágenes
+    slidesPerView: 1, 
+    spaceBetween: 10, 
   };
 
   constructor(
@@ -26,10 +26,10 @@ export class Tab1Page implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.asistente = sessionStorage.getItem('nombre'); // Actualizado para reflejar el cambio de username a nombre
+    this.asistente = sessionStorage.getItem('nombre'); 
     if (!this.asistente) {
       console.error('Asistente no autenticado');
-      // Puedes redirigir al login si lo consideras necesario
+      
     }
     console.log(this.asistente);
   }
@@ -45,7 +45,7 @@ export class Tab1Page implements OnInit {
     });
 
     this.apidatos.getPosts().subscribe(
-      datos => (this.posteos = datos) // Convertimos lo recibido en un arreglo llamado posteos
+      datos => (this.posteos = datos) 
     );
   }
 }

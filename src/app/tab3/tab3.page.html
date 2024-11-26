@@ -14,12 +14,12 @@
         <p><strong>Fecha:</strong> {{ evento.fecha }}</p>
         <p><strong>Estado:</strong> {{ evento.estado }}</p>
       </ion-label>
-      <!-- Botón para generar QR -->
+     
       <ion-button (click)="generarQR(evento)">Generar QR</ion-button>
     </ion-item>
   </ion-list>
 
-  <!-- Mostrar el QR generado -->
+  
   <div *ngIf="qrData">
     <angularx-qrcode [qrcValue]="qrData" [qrcSize]="256"></angularx-qrcode>
   </div>

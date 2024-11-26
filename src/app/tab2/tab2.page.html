@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content>
-  <!-- Lista de eventos -->
+ 
   <ion-list>
     <ion-item *ngFor="let evento of eventos">
       <ion-label>
@@ -15,10 +15,10 @@
         <p><strong>Hora:</strong> {{ evento.hora }}</p>
         <p><strong>Ubicación:</strong> {{ evento.ubicacion }}</p>
         <p><strong>Organizador:</strong> {{ evento.organizador }}</p>
-        <!-- Agrega más campos si es necesario -->
+        
       </ion-label>
 
-      <!-- Botón de inscripción -->
+      
       <ion-button (click)="inscribirse(evento.id)" color="success">
         Inscribirse
       </ion-button>

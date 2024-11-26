@@ -17,7 +17,7 @@ const routes: Routes = [
     loadChildren: () => import('./inicio/inicio.module').then(m => m.InicioPageModule)
   },
   {
-    path: 'detalle-asistente', // Actualizado desde "detalle"
+    path: 'detalle-asistente', 
     loadChildren: () => import('./detalle-asistente/detalle-asistente.module').then(m => m.DetalleAsistentePageModule),
     canActivate: [AutorizadoGuard]
   },
@@ -32,7 +32,7 @@ const routes: Routes = [
     canActivate: [AutorizadoGuard]
   },
   {
-    path: 'crear-asistente', // Actualizado desde "crear-usuario"
+    path: 'crear-asistente', 
     loadChildren: () => import('./crear-asistente/crear-asistente.module').then(m => m.CrearAsistentePageModule)
   },
   {

@@ -1,6 +1,6 @@
 // Asistentes
 
-// Representación completa de un asistente
+
 export interface IAsistente {
     id: number;
     nombre: string;

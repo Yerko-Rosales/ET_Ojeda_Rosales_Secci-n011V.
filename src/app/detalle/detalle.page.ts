@@ -8,18 +8,17 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class DetallePage implements OnInit {
 
-  asistente: any; // Renombrado desde "usuario"
-
+  asistente: any; 
   constructor(private activated: ActivatedRoute, 
               private router: Router) { 
     this.activated.queryParams.subscribe(params => {
-      this.asistente = JSON.parse(params['asistente']); // Adaptado para "asistente"
+      this.asistente = JSON.parse(params['asistente']); 
     });
   }
 
   ngOnInit() {}
 
   regresar() {
-    this.router.navigate(['/tabs/tab2']); // Verifica si esta ruta es correcta para tu aplicación
+    this.router.navigate(['/tabs/tab2']); 
   }
 }
