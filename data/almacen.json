@@ -1,0 +1,101 @@
+{
+  "asistentes": [
+    {
+      "id": "1",
+      "nombre": "Jonathan",
+      "eventoId": "10",
+      "password": "12345678",
+      "isactive": true,
+      "estado": "activo",
+      "evento": "Conferencia de Tecnología"
+    },
+    {
+      "id": "749735",
+      "nombre": "juan",
+      "evento": "",
+      "estado": true,
+      "password": "12345678"
+    },
+    {
+      "id": "272721",
+      "nombre": "yerko",
+      "evento": "",
+      "estado": true,
+      "password": "12345678"
+    }
+  ],
+  "eventos": [
+    {
+      "id": "10",
+      "nombre": "Conferencia de Tecnología",
+      "descripcion": "Descubre las últimas tendencias en tecnología con expertos internacionales.",
+      "fecha": "2024-11-15",
+      "hora": "10:00 AM",
+      "lugar": "Centro de Convenciones Santiago",
+      "organizador": "TechWorld Chile"
+    },
+    {
+      "id": "12",
+      "nombre": "Taller de Innovación",
+      "descripcion": "Aprende herramientas prácticas para fomentar la creatividad en tu entorno laboral.",
+      "fecha": "2024-12-01",
+      "hora": "02:00 PM",
+      "lugar": "Auditorio Duoc UC",
+      "organizador": "Innovar Ltda."
+    },
+    {
+      "id": "15",
+      "nombre": "Feria de Emprendimiento",
+      "descripcion": "Un espacio para conectar con emprendedores y descubrir ideas innovadoras.",
+      "fecha": "2024-12-10",
+      "hora": "09:00 AM",
+      "lugar": "Parque Bicentenario",
+      "organizador": "Startup Chile"
+    },
+    {
+      "id": "18",
+      "nombre": "Cumbre de Salud y Bienestar",
+      "descripcion": "Conferencias y talleres sobre cómo mejorar tu calidad de vida.",
+      "fecha": "2025-01-20",
+      "hora": "08:30 AM",
+      "lugar": "Hotel Plaza Santiago",
+      "organizador": "Healthy Life"
+    },
+    {
+      "id": "20",
+      "nombre": "Congreso de Inteligencia Artificial",
+      "descripcion": "Explora los avances más recientes en inteligencia artificial y sus aplicaciones.",
+      "fecha": "2025-02-15",
+      "hora": "11:00 AM",
+      "lugar": "Universidad Católica de Chile",
+      "organizador": "AI Latam"
+    },
+    {
+      "id": "25",
+      "nombre": "Festival de Música Electrónica",
+      "descripcion": "Vive una experiencia única con los mejores DJs internacionales.",
+      "fecha": "2025-03-01",
+      "hora": "06:00 PM",
+      "lugar": "Espacio Riesco",
+      "organizador": "ElectroFest"
+    }
+  ],
+  "qr": [
+    {
+      "id": "7982",
+      "nombreAsistente": "Jonathan",
+      "eventoAsistente": "Conferencia de Tecnología"
+    },
+    {
+      "id": "c6a4",
+      "nombreAsistente": "rosales",
+      "eventoAsistente": "Taller de Innovación"
+    },
+    {
+      "id": "19b9",
+      "nombreAsistente": "yerko",
+      "eventoAsistente": "",
+      "nombreUsuario": ""
+    }
+  ]
+}
