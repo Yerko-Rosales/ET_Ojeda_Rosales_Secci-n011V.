@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="volver()">
+        Regresar
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Detalle Asistente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card style="margin-top:10%">
+    <ion-card-header>
+      <ion-card-subtitle>Id Asistente: {{asistente.id}}</ion-card-subtitle>
+      <ion-card-title>Nombre Asistente: {{asistente.nombre}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>
+        Evento: {{asistente.evento}}<br>
+        Estado: {{asistente.estado}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+  <div style="text-align: center; margin-top: 30px;">
+    <ion-button (click)="actualizarAsistente(this.asistente)" shape="round" color="warning">
+      Actualizar Asistente
+    </ion-button>
+    <ion-button (click)="consultaElimina()" shape="round" color="danger">
+      Eliminar Asistente
+    </ion-button>
+    <ion-button (click)="generarQr()" shape="round" color="success">
+      Generar QR
+    </ion-button>
+
+    <ion-card class="ion-text-center">
+      <ion-card-content>
+        <qrcode [qrdata]="qrdata" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

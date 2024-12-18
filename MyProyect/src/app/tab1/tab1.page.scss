@@ -1,0 +1,30 @@
+
+ion-slides {
+  height: auto; 
+  width: 100%; 
+  display: block;
+}
+
+ion-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ion-slide img {
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
+}
+.slide-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-container img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}

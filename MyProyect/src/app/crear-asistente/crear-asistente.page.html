@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <div class="imagen-superpuesta">
+    <img src="assets/icon/IV.png" alt="Imagen de Registro" />
+  </div>
+
+ 
+  <form [formGroup]="registroForm">
+    <ion-item>
+      <ion-input
+        type="text"
+        placeholder="Ingrese su nombre"
+        formControlName="nombre"
+        label="Nombre"
+        labelPlacement="floating"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input
+        type="email"
+        placeholder="Ingrese su correo"
+        formControlName="email"
+        label="Correo"
+        labelPlacement="floating"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input
+        type="password"
+        placeholder="Cree su contraseña"
+        formControlName="password"
+        label="Contraseña"
+        labelPlacement="floating"
+      ></ion-input>
+    </ion-item>
+    <ion-button expand="full" color="success" (click)="registrarAsistente()">
+      Registrarse
+    </ion-button>
+  </form>
+</ion-content>

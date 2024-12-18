@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Agregar Asistente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <form>
+    <ion-item>
+      <ion-input 
+        type="text" 
+        placeholder="Nombre del asistente.." 
+        label="Ingrese nombre"
+        labelPlacement="floating" 
+        name="nombre" 
+        [(ngModel)]="asistente.nombre">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input 
+        type="text" 
+        placeholder="Evento asociado.." 
+        label="Ingrese evento"
+        labelPlacement="floating" 
+        name="evento" 
+        [(ngModel)]="asistente.evento">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input 
+        type="text" 
+        placeholder="Estado del asistente.." 
+        label="Ingrese estado"
+        labelPlacement="floating" 
+        name="estado" 
+        [(ngModel)]="asistente.estado">
+      </ion-input>
+    </ion-item>
+
+    <div style="text-align: center; margin-top: 30px;">
+      <ion-button (click)="CrearAsistente()" shape="round" color="success">
+        Crear Asistente
+      </ion-button>
+    </div>
+  </form>
+
+</ion-content>
